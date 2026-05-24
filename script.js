@@ -2,7 +2,7 @@
 const CONFIG = {
     // ВАЖНО: Измените этот адрес на ваш ngrok адрес или production API
     // Пример: https://abc123.ngrok.io
-    API_BASE_URL: 'https://tweet-trickster-persuaded.ngrok-free.dev',
+    API_BASE_URL: 'https://tweet-trickster-persuaded.ngrok-free.dev?',
     
     // Endpoint для получения профиля
     // Ожидается ответ: { user_id, username, email }
@@ -63,7 +63,8 @@ async function loadProfile() {
         const response = await fetch(`${CONFIG.API_BASE_URL}${CONFIG.PROFILE_ENDPOINT}?user_id=${userId}`, {
             method: 'GET',
             headers: {
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
+                'ngrok-skip-browser-warning': 'true' 
             }
         });
         
