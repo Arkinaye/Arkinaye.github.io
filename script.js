@@ -156,6 +156,7 @@ function showMenu() {
 }
 
 function showProfile() {
+    setAvatar();
     loadingState.classList.add('hidden');
     profileContent.classList.remove('hidden');
     errorState.classList.add('hidden');
