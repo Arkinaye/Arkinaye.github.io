@@ -142,6 +142,7 @@ function displayProfile(data) {
     
     userIdDisplay.dataset.value = data.user_id;
     emailDisplay.dataset.value = data.email || '';
+    setAvatar();
 }
 
 function displayMenu(data) {
