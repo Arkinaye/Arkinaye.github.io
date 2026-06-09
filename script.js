@@ -35,11 +35,30 @@ const errorMessage = document.getElementById('error-message');
 
 const copyButtons = document.querySelectorAll('.copy-button');
 
+// == avatar elems===
+const avatarImg = document.getElementById('avatar-img');
+const avatarFallback = document.getElementById('avatar-fallback');
+
+
 // ===== Telegram SDK =====
 let tg = window.Telegram.WebApp;
 
 // ===== Initialize App =====
 let currentUserId = null;
+
+
+function setAvatar() {
+  const photoUrl = tg.initDataUnsafe?.user?.photo_url;
+  if (photoUrl) {
+    avatarImg.src = photoUrl;
+    avatarImg.classList.remove('hidden');
+    avatarFallback.classList.add('hidden');
+  } else {
+    avatarImg.classList.add('hidden');
+    avatarFallback.classList.remove('hidden');
+  }
+}
+
 
 function initApp() {
     // Расширить приложение на весь экран
@@ -312,6 +331,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Инициализировать приложение
     initApp();
+    setAvatar();
 });
 
 // ===== Keyboard Safety =====
