@@ -202,6 +202,7 @@ body {
 
 .card {
     background: #ffffff;
+    color: #111111;
     border-radius: 12px;
     padding: 16px;
     border: 1px solid #e5e5ea;
@@ -226,7 +227,7 @@ body {
 
 .card-value {
     font-size: 16px;
-    color: #000000;
+    color: #111111;
     font-weight: 500;
     word-break: break-all;
     line-height: 1.4;
@@ -325,6 +326,7 @@ body {
     width: 100%;
     max-width: 420px;
     background: #ffffff;
+    color: #111111;
     border-radius: 20px;
     padding: 20px;
     z-index: 1;
@@ -337,6 +339,12 @@ body {
     align-items: center;
     gap: 10px;
     margin-bottom: 14px;
+}
+
+.modal-header h2 {
+    margin: 0;
+    font-size: 18px;
+    color: #111111;
 }
 
 .close-modal {
@@ -358,6 +366,7 @@ body {
 
 .referral-item {
     background: #f8f8fa;
+    color: #111111;
     border-radius: 14px;
     padding: 14px 16px;
 }
@@ -365,6 +374,7 @@ body {
 .referral-item p {
     margin: 0;
     line-height: 1.4;
+    color: #111111;
 }
 
 .toast {
